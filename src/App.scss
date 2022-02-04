@@ -33,6 +33,10 @@ $appBgColor: #4a99d3;
   padding-bottom: 250px;
   height: auto;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    width: 600px;
+  }
 }
 
 .paragraph {
@@ -51,14 +55,21 @@ $appBgColor: #4a99d3;
   width: 700px;
   margin: 0 auto;
   padding-top: 50px;
+
+  @media screen and (max-width: 1200px) {
+    width: 500px;
+  }
 }
 
 .pictures {
   text-align: center;
 }
 
-.pictures img {
-  padding-right: 12px;
+img {
+  // transform: scale(1.2);
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7);
+  }
 }
 
 .shape1 {
