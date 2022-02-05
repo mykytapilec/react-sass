@@ -1,4 +1,9 @@
+@import "fonts.scss";
+@include font-face("Roboto-Italic", "../fonts/Roboto-Italic");
+
 $appBgColor: #4a99d3;
+$appWhiteColor: #ffffff;
+$appNavyColor: rgba(33, 63, 100, 0.8);
 
 * {
   margin: 0;
@@ -13,24 +18,22 @@ $appBgColor: #4a99d3;
 }
 
 .App {
-  color: #eaecee;
-  font-size: 14px;
-  font-family: Open Sans, sans-serif;
+  color: $appWhiteColor;
+  font-size: 0.37cm;  //14px
+  font-family: 'Roboto-Italic', sans-serif;
   line-height: 1.1;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 .container {
   background: $appBgColor;
-  padding-top: 100px;
+  padding-top: 26.4mm;  //100px
 }
 
 .content {
-  background: rgba(33, 63, 100, 0.8);
-  width: 800px;
+  background: $appNavyColor;
+  width: 8.33in; //800px;
   margin: 0 auto;
-  padding-bottom: 250px;
+  padding-bottom: 150px;
   height: auto;
   position: relative;
 
@@ -40,21 +43,23 @@ $appBgColor: #4a99d3;
 }
 
 .paragraph {
-  padding-bottom: 30px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
 .title {
-  color: white;
-  padding-bottom: 43px;
+  color: $appWhiteColor;
 }
 
 .textWrapper {
   width: 700px;
+  height: 1000px;
   margin: 0 auto;
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
   @media screen and (max-width: 1200px) {
     width: 500px;
@@ -62,15 +67,19 @@ $appBgColor: #4a99d3;
 }
 
 .pictures {
-  text-align: center;
-}
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
 
-img {
-  // transform: scale(1.2);
-  @media screen and (max-width: 1200px) {
-    transform: scale(0.7);
+  img {
+    margin: 0 auto;
+
+    @media screen and (max-width: 1200px) {
+      transform: scale(0.7);
+    }
   }
 }
+
+
 
 .shape1 {
   position: absolute;
@@ -78,6 +87,10 @@ img {
   right: 0;
   transform: translate(50%, -50%);
   z-index: 40;
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7) translate(70%, -70%);
+  }
 }
 
 .shape2 {
@@ -86,6 +99,10 @@ img {
   left: 0;
   transform: translate(-35%, 40%);
   z-index: 5;
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7) translate(-55%, 60%);
+  }
 }
 
 .shape3 {
@@ -94,6 +111,10 @@ img {
   right: 0;
   transform: translate(35%, 130%);
   z-index: 5;
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7) translate(55%, 110%);
+  }
 }
 
 .shape4 {
@@ -102,10 +123,14 @@ img {
   left: 0;
   transform: translate(10%, 210%);
   z-index: 5;
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7) translate(-10%, 230%);
+  }
 }
 
 .grass {
-  background-image: url(./img/grass.png);
+  background-image: url(../img/grass.png);
   height: 130px;
   width: 100%;
   background-repeat: repeat;

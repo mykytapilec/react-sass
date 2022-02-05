@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./styles/App.scss";
 import one from "./img/one.png";
 import two from "./img/two.png";
 import three from "./img/three.png";
@@ -87,13 +87,13 @@ function App() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud
             </p>
-          </div>
-          <div className="pictures">
-            <img src={one} alt="" />
-            <img src={two} alt="" />
-            <img src={three} alt="" />
-            <img src={four} alt="" />
-            <img src={five} alt="" />
+            <div className="pictures">
+              <img src={one} alt="" />
+              <img src={two} alt="" />
+              <img src={three} alt="" />
+              <img src={four} alt="" />
+              <img src={five} alt="" />
+            </div>
           </div>
           <img src={shape1} className="shape1" alt="" />
           <img src={shape2} className="shape2" alt="" />
