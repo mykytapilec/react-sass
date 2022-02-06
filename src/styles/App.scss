@@ -19,14 +19,14 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
 
 .App {
   color: $appWhiteColor;
-  font-size: 0.37cm;  //14px
-  font-family: 'Roboto-Italic', sans-serif;
+  font-size: 0.37cm; //14px
+  font-family: "Roboto-Italic", sans-serif;
   line-height: 1.1;
 }
 
 .container {
   background: $appBgColor;
-  padding-top: 26.4mm;  //100px
+  padding-top: 26.4mm; //100px
 }
 
 .content {
@@ -56,7 +56,7 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   width: 700px;
   height: 1000px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: calc(100% - 54em);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -78,8 +78,6 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
     }
   }
 }
-
-
 
 .shape1 {
   position: absolute;
