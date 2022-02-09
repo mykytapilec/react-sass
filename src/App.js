@@ -95,11 +95,11 @@ function App() {
               <img src={five} alt="" />
             </div>
           </div>
-          <img src={shape1} className="shape1" alt="" />
-          <img src={shape2} className="shape2" alt="" />
-          <img src={shape3} className="shape3" alt="" />
-          <img src={shape4} className="shape4" alt="" />
         </div>
+        <img src={shape1} className="shape1" alt="" />
+        <img src={shape2} className="shape2" alt="" />
+        <img src={shape3} className="shape3" alt="" />
+        <img src={shape4} className="shape4" alt="" />
       </div>
       <div className="grass" />
     </div>

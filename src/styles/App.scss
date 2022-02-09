@@ -4,6 +4,7 @@
 $appBgColor: #4a99d3;
 $appWhiteColor: #ffffff;
 $appNavyColor: rgba(33, 63, 100, 0.8);
+$maxWidth: 1300px;
 
 * {
   margin: 0;
@@ -14,32 +15,34 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
 }
 
 * ::-webkit-scrollbar {
-  display: none;
+  display: none; /* chrome */
 }
 
 .App {
   color: $appWhiteColor;
+  background: $appBgColor;
   font-size: 0.37cm; //14px
   font-family: "Roboto-Italic", sans-serif;
   line-height: 1.1;
 }
 
 .container {
-  background: $appBgColor;
   padding-top: 26.4mm; //100px
+  width: 8.33in; //800px;
+  margin: 0 auto;
+  position: relative;
+
+  @media screen and (max-width: $maxWidth) {
+    width: 600px;
+  }
 }
 
 .content {
   background: $appNavyColor;
-  width: 8.33in; //800px;
-  margin: 0 auto;
   padding-bottom: 150px;
   height: auto;
   position: relative;
-
-  @media screen and (max-width: 1200px) {
-    width: 600px;
-  }
+  z-index: 30;
 }
 
 .paragraph {
@@ -61,8 +64,9 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   flex-direction: column;
   justify-content: space-around;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: $maxWidth) {
     width: 500px;
+    padding-top: 30px;
   }
 }
 
@@ -73,7 +77,7 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   img {
     margin: 0 auto;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: $maxWidth) {
       transform: scale(0.7);
     }
   }
@@ -83,11 +87,11 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, -50%);
+  transform: translate(50%, 15%);
   z-index: 40;
 
-  @media screen and (max-width: 1200px) {
-    transform: scale(0.7) translate(70%, -70%);
+  @media screen and (max-width: $maxWidth) {
+    transform: scale(0.7) translate(70%, 15%);
   }
 }
 
@@ -95,11 +99,11 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-35%, 40%);
+  transform: translate(-50%, 120%);
   z-index: 5;
 
-  @media screen and (max-width: 1200px) {
-    transform: scale(0.7) translate(-55%, 60%);
+  @media screen and (max-width: $maxWidth) {
+    transform: scale(0.7) translate(-70%, 150%);
   }
 }
 
@@ -107,11 +111,11 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(35%, 130%);
+  transform: translate(35%, 250%);
   z-index: 5;
 
-  @media screen and (max-width: 1200px) {
-    transform: scale(0.7) translate(55%, 110%);
+  @media screen and (max-width: $maxWidth) {
+    transform: scale(0.7) translate(60%, 310%);
   }
 }
 
@@ -119,11 +123,11 @@ $appNavyColor: rgba(33, 63, 100, 0.8);
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(10%, 210%);
+  transform: translate(-50%, 500%);
   z-index: 5;
 
-  @media screen and (max-width: 1200px) {
-    transform: scale(0.7) translate(-10%, 230%);
+  @media screen and (max-width: $maxWidth) {
+    transform: scale(0.7) translate(-70%, 600%);
   }
 }
 
